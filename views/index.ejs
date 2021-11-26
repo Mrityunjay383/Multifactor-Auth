@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Latest CDN production JavaScript and CSS -->
-    <script
-      src="https://global.oktacdn.com/okta-signin-widget/5.13.1/js/okta-sign-in.min.js"
-      type="text/javascript"
-    ></script>
-    <link
-      href="https://global.oktacdn.com/okta-signin-widget/5.13.1/css/okta-sign-in.min.css"
-      type="text/css"
-      rel="stylesheet"
-    />
-    <script src="/scripts/helpers.js" type="text/javascript"></script>
-    <script src="/scripts/main.js" type="text/javascript"></script>
-  </head>
-  <body>
-    <div id="widget-container"></div>
-    <!-- <button onclick="oktaLoginPopup()"> Okta SignIn </button> -->
-    <button onclick="mockLogin()"> MOCK LOGIN </button>
-  </body>
+    <head>
+        <!--Meta Declaration-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Bootstrap CDN-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+        <!-- Font Awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+        integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+        crossorigin="anonymous" />
+
+        <!-- Latest CDN production JavaScript and CSS -->
+        <script
+          src="https://global.oktacdn.com/okta-signin-widget/5.13.1/js/okta-sign-in.min.js"
+          type="text/javascript"
+        ></script>
+        <link
+          href="https://global.oktacdn.com/okta-signin-widget/5.13.1/css/okta-sign-in.min.css"
+          type="text/css"
+          rel="stylesheet"
+        />
+        <script src="/scripts/helpers.js" type="text/javascript"></script>
+        <script src="/scripts/main.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" href="/styles/login.css">
+        <title>MFA</title>
+
+    </head>
+    <body>
+
+        <!--Header with navBar-->
+        <header>
+            <h1>MultiFactor Auth</h1>
+        </header>
+
+        <main>
+
+        <!--landing BOdy-->
+            <section class="row lanBody">
+
+        <!--    Text Section-->
+                <div class="col-lg-5 con1">
+
+                </div>
+
+
+        <!--     Sec Section-->
+                <div id="formContainer" class="col-lg-7 con2">
+                  <div id="widget-container"></div>
+                  <!-- <button onclick="oktaLoginPopup()"> Okta SignIn </button> -->
+                  <button onclick="mockLogin()"> MOCK LOGIN </button>
+                </div>
+            </section>
+
+
+
+        </main>
+
+        <!-- JQuery CDN -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!--Local Scripts-->
+
+
+    </body>
 </html>
