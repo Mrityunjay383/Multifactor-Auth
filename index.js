@@ -1,13 +1,19 @@
 const express = require('express');
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
-const path = require('path')
+const path = require('path');
+const ejs = require('ejs');
 
 const { loginMiddleware, authMiddleware } = require('./middleware');
 const { reverseProxyRouter } = require('./proxy');
 
 // Create Express Server
 const app = express();
+
+// ejs
+app.set('view engine', 'ejs');
+//Static Folder
+app.use(express.static("public"));
 
 // Configuration
 const PORT = 3000;
