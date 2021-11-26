@@ -3,8 +3,8 @@ const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
 const path = require('path')
 
-const { loginMiddleware, authMiddleware } = require('./middleware')
-const { reverseProxyRouter } = require('./proxy')
+const { loginMiddleware, authMiddleware } = require('./middleware');
+const { reverseProxyRouter } = require('./proxy');
 
 // Create Express Server
 const app = express();
