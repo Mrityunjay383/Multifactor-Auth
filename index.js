@@ -32,6 +32,8 @@ app.get('/info', (req, res, next) => {
 
 // app.use('/login', express.static(path.join(__dirname, 'authpage')))
 // app.use('/404', express.static(path.join(__dirname, '404')))
+// TODO make logout middleware
+
 app.get("/login", (req, res) => {
   res.render("index");
 });
