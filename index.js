@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require("morgan");
 const cookieParser = require("cookie-parser");
+const path = require('path')
 
 const { loginMiddleware, authMiddleware } = require('./middleware')
 const { reverseProxyRouter } = require('./proxy')
@@ -23,7 +24,8 @@ app.get('/info', (req, res, next) => {
     res.send('This is a proxy service.');
 });
 
-app.use('/login', loginMiddleware)
+app.use('/login', express.static(path.join(__dirname, 'authpage')))
+app.use('/404', express.static(path.join(__dirname, '404')))
 
 app.use(authMiddleware);
 
